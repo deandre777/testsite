@@ -1,3 +1,5 @@
+<div id="testdiv"></div>
+
 <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js">
 const contentful = require('contentful')
 
@@ -7,7 +9,13 @@ const client = contentful.createClient({
   accessToken: 'tX91iNZ06cvDtgE2WpvkVf6ToL2bls8ZkievcMPF448'
 })
 
-client.getEntry('4fkKkhM2GZR3seQptxW1wW')
+  
+var testdivvar = document.getElementById('testdiv');
+  
+var entry = client.getEntry('4fkKkhM2GZR3seQptxW1wW')
   .then((entry) => console.log(entry))
   .catch(console.error)
+
+testdivvar.innerHTML = entry;
+  
   </script>

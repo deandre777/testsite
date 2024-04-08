@@ -1,1 +1,13 @@
+<script>
+const contentful = require('contentful')
 
+const client = contentful.createClient({
+  space: '1to0kuhtw4z6',
+  environment: 'master', // defaults to 'master' if not set
+  accessToken: 'tX91iNZ06cvDtgE2WpvkVf6ToL2bls8ZkievcMPF448'
+})
+
+client.getEntry('4fkKkhM2GZR3seQptxW1wW')
+  .then((entry) => console.log(entry))
+  .catch(console.error)
+  </script>
